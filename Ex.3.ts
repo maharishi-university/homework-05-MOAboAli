@@ -30,7 +30,7 @@ export async function getData() {
         const rawResponse: Response = await fetch('https://dummyjson.com/recipes');
         const jsonBody: Root = await rawResponse.json();
         console.log(jsonBody.recipes.length)
-        console.log(jsonBody.recipes.forEach(x => console.log(x.name)));
+        jsonBody.recipes.forEach(x => console.log(x.name));
         const recipeNames = jsonBody.recipes.map(x => x.name);
         console.log(recipeNames);
     }

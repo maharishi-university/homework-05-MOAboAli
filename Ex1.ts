@@ -5,14 +5,23 @@ class Meditation {
     constructor(times: number) {
         this.times = times;
     }
-    start() {
-        setTimeout(() => {
-            for (let i = this.times; i > 0; i--) {
-                console.log(i)
-            }
-            console.log("Jay Guru Dev");
+    async start() {
+        await this.foo(this.times);
+
+    }
+
+    async foo(timer: number) {
+        for (let i = 0; i < timer; i++) {
+            setTimeout(() => {
+                console.log(timer - i);
+                if (i === timer - 1) {
+                    console.log("Jay Guru Dev");
+                }
+            }, i * 1000);
+
+
         }
-            , 0)
+        // console.log("Jay Guru Dev");
     }
 
 }

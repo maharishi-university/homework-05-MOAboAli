@@ -16,5 +16,4 @@ console.log('end');
 
 
 //Ex.3
-
 getData();
