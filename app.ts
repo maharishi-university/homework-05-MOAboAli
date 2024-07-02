@@ -9,9 +9,17 @@ ShowResult();
 
 //Ex.2
 console.log('start');
-isPrime(7)
-    .then(console.log)
-    .catch(console.error);
+
+const checkPrime = async () => {
+    try {
+        const prime = await isPrime(7);
+        console.log(prime);
+    }
+    catch (error) {
+
+    }
+}
+checkPrime();
 console.log('end');
 
 
